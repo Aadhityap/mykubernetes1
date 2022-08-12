@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ghost-pod
+  namespace: venkat-rr
+  labels:
+    type: cms
+spec:
+  containers:
+    - name: ghost
+      image: ghost
+      ports:
+        - containerPort: 2368
+          hostPort: 9090
+...            
